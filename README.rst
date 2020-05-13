@@ -128,7 +128,7 @@ Installed with AdvancedAnalytics
         * scikit-image
         * nltk
         * pydotplus
-        * python-graphviz
+        * graphviz
         * wordcloud
         * newspaper3k
 
