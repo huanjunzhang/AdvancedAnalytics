@@ -37,7 +37,7 @@ setuptools.setup(
             "statsmodels",
             "nltk",
             "pydotplus",
-            "python-graphviz",
+            "graphviz",
             "wordcloud",
             "newspaper3k"]
 )
