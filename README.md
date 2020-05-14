@@ -79,69 +79,41 @@ tree_regressor.display_metrics(dt, X, y)
 Current Modules and Classes
 ===========================
 
-ReplaceImputeEncode
+## ReplaceImputeEncode: Classes for Data Preprocessing
 
-:   
+-   DT defines new data types used in the data dictionary
+-   ReplaceImputeEncode a class for data preprocessing
 
-    Classes for Data Preprocessing
+## Regression: Classes for Linear and Logistic Regression
 
-    :   -   DT defines new data types used in the data dictionary
-        -   ReplaceImputeEncode a class for data preprocessing
+-   linreg support for linear regressino
+-   logreg support for logistic regression
+-   stepwise a variable selection class
 
-Regression
+## Tree: Classes for Decision Tree Solutions
 
-:   
+-   tree\_regressor support for regressor decision trees
+-   tree\_classifier support for classification decision trees
 
-    Classes for Linear and Logistic Regression
+## Forest: Classes for Random Forests
 
-    :   -   linreg support for linear regressino
-        -   logreg support for logistic regression
-        -   stepwise a variable selection class
+-   forest\_regressor support for regressor random forests
+-   forest\_classifier support for classification random forests
 
-Tree
+## NeuralNetwork: Classes for Neural Networks
 
-:   
+-   nn\_regressor support for regressor neural networks
+-   nn\_classifier support for classification neural networks
 
-    Classes for Decision Tree Solutions
+## TextAnalytics: Classes for Text Analytics
 
-    :   -   tree\_regressor support for regressor decision trees
-        -   tree\_classifier support for classification decision trees
+-   text\_analysis support for topic analysis
+-   sentiment\_analysis support for sentiment analysis
 
-Forest
+## Internet: Classes for Internet Applications
 
-:   
-
-    Classes for Random Forests
-
-    :   -   forest\_regressor support for regressor random forests
-        -   forest\_classifier support for classification random forests
-
-NeuralNetwork
-
-:   
-
-    Classes for Neural Networks
-
-    :   -   nn\_regressor support for regressor neural networks
-        -   nn\_classifier support for classification neural networks
-
-TextAnalytics
-
-:   
-
-    Classes for Text Analytics
-
-    :   -   text\_analysis support for topic analysis
-        -   sentiment\_analysis support for sentiment analysis
-
-Internet
-
-:   
-
-    Classes for Internet Applications
-
-    :   -   scrape support for web scrapping
-        -   metrics a class for solution metrics
+-   scrape support for web scrapping
+-   metrics a class for solution metrics
 
 Installation and Dependencies
 =============================
@@ -155,99 +127,99 @@ pip install AdvancedAnalytics
 conda install -c dr.jones AdvancedAnalytics
 ```
 
-General Dependencies
+## General Dependencies
 
-:   There are dependencies. Most classes import one or more modules from
-    **Sci-Learn**, referenced as *sklearn* in module imports, and
-    **StatsModels**. These are both installed with the current version
-    of **anaconda**.
+There are dependencies. Most classes import one or more modules from
+**Sci-Learn**, referenced as *sklearn* in module imports, and
+**StatsModels**. These are both installed with the current version
+of **anaconda**.
 
-Installed with AdvancedAnalytics
+## Installed with AdvancedAnalytics
 
-:   Most packages used by **AdvancedAnalytics** are automatically
-    installed with its installation. These consist of the following
-    packages.
+Most packages used by **AdvancedAnalytics** are automatically
+installed with its installation. These consist of the following
+packages.
 
-    > -   statsmodels
-    > -   scikit-learn
-    > -   scikit-image
-    > -   nltk
-    > -   pydotplus
-    > -   graphviz
-    > -   wordcloud
-    > -   newspaper3k
+> -   statsmodels
+> -   scikit-learn
+> -   scikit-image
+> -   nltk
+> -   pydotplus
+> -   graphviz
+> -   wordcloud
+> -   newspaper3k
 
-Other Dependencies
+## Other Dependencies
 
-:   The *Tree* and *Forest* modules plot decision trees and importance
-    metrics using **pydotplus** and the **graphviz** packages. These
-    should also be automatically installed with **AdvancedAnalytics**.
+The *Tree* and *Forest* modules plot decision trees and importance
+metrics using **pydotplus** and the **graphviz** packages. These
+should also be automatically installed with **AdvancedAnalytics**.
 
-    However, the **graphviz** install is sometimes not fully complete
-    with the conda install. It may require an additional pip install.
+However, the **graphviz** install is sometimes not fully complete
+with the conda install. It may require an additional pip install.
 
-    ``` {.python}
-    pip install graphviz
-    ```
+``` {.python}
+pip install graphviz
+```
 
-Text Analytics Dependencies
+## Text Analytics Dependencies
 
-:   The *TextAnalytics* module uses the **NLTK**, **Sci-Learn**, and
-    **wordcloud** packages. Usually these are also automatically
-    installed automatically with **AdvancedAnalytics**. You can verify
-    they are installed using the following commands.
+The *TextAnalytics* module uses the **NLTK**, **Sci-Learn**, and
+**wordcloud** packages. Usually these are also automatically
+installed automatically with **AdvancedAnalytics**. You can verify
+they are installed using the following commands.
 
-    ``` {.python}
-    conda list nltk
-    conda list sci-learn
-    conda list wordcloud
-    ```
+``` {.python}
+conda list nltk
+conda list sci-learn
+conda list wordcloud
+```
 
-    However, when the **NLTK** package is installed, it does not install
-    the data used by the package. In order to load the **NLTK** data run
-    the following code once before using the *TextAnalytics* module.
+However, when the **NLTK** package is installed, it does not install
+the data used by the package. In order to load the **NLTK** data run
+the following code once before using the *TextAnalytics* module.
 
-    ``` {.python}
-    #The following NLTK commands should be run once
-    nltk.download("punkt")
-    nltk.download("averaged_preceptron_tagger")
-    nltk.download("stopwords")
-    nltk.download("wordnet")
-    ```
+``` {.python}
+#The following NLTK commands should be run once
+nltk.download("punkt")
+nltk.download("averaged_preceptron_tagger")
+nltk.download("stopwords")
+nltk.download("wordnet")
+```
 
-    The **wordcloud** package also uses a little know package
-    **tinysegmenter** version 0.3. Run the following code to ensure it
-    is installed.
+The **wordcloud** package also uses a little know package
+**tinysegmenter** version 0.3. Run the following code to ensure it
+is installed.
 
-    ``` {.python}
-    conda install -c conda-forge tinysegmenter==0.3
-    # or
-    pip install tinysegmenter==0.3
-    ```
+``` {.python}
+conda install -c conda-forge tinysegmenter==0.3
+# or
+pip install tinysegmenter==0.3
+```
 
-Internet Dependencies
+## Internet Dependencies
 
-:   The *Internet* module contains a class *scrape* which has some
-    functions for scraping newsfeeds. Some of these use the
-    **newspaper3k** package. It should be automatically installed with
-    **AdvancedAnalytics**.
+The *Internet* module contains a class *scrape* which has some
+functions for scraping newsfeeds. Some of these use the
+**newspaper3k** package. It should be automatically installed with
+**AdvancedAnalytics**.
 
-    However, it also uses the package **newsapi-python**, which is not
-    automatically installed. If you intended to use this news scraping
-    scraping tool, it is necessary to install the package using the
-    following code:
+However, it also uses the package **newsapi-python**, which is not
+automatically installed. If you intended to use this news scraping
+scraping tool, it is necessary to install the package using the
+following code:
 
-    ``` {.python}
-    conda install -c conda-forge newsapi
-    # or
-    pip install newsapi
-    ```
+``` {.python}
+conda install -c conda-forge newsapi
+# or
+pip install newsapi
+```
 
-    In addition, the newsapi service is sponsored by a commercial
-    company www.newsapi.com. You will need to register with them to
-    obtain an *API* key required to access this service. This is free of
-    charge for developers, but there is a fee if *newsapi* is used to
-    broadcast news with an application or at a website.
+In addition, the newsapi service is sponsored by a commercial
+company www.newsapi.com. You will need to register with them to
+obtain an *API* key required to access this service. This is free of
+charge for developers, but there is a fee if *newsapi* is used to
+broadcast news with an application or at a website.
 
 Code of Conduct
 ---------------
