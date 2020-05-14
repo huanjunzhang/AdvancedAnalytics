@@ -13,9 +13,9 @@ Description
 From a high level view, building machine learning applications typically
 proceeds through three stages:
 
-> 1.  Data Preprocessing
-> 2.  Modeling or Analytics
-> 3.  Postprocessing
+1.  Data Preprocessing
+2.  Modeling or Analytics
+3.  Postprocessing
 
 The classes and methods in **AdvancedAnalytics** primarily support the
 first and last stages of machine learning applications.
@@ -24,9 +24,9 @@ Data scientists report they spend 80% of their total effort in first and
 last stages. The first stage, *data preprocessing*, is concerned with
 preparing the data for analysis. This includes:
 
-> 1.  identifying and correcting outliers,
-> 2.  imputing missing values, and
-> 3.  encoding data.
+1.  identifying and correcting outliers,
+2.  imputing missing values, and
+3.  encoding data.
 
 The last stage, *solution postprocessing*, involves developing graphic
 summaries of the solution, and metrics for evaluating the quality of the
@@ -44,9 +44,9 @@ Usage
 Currently the most popular usage is for supporting solutions developed
 using these advanced machine learning packages:
 
-> -   Sci-Learn
-> -   StatsModels
-> -   NLTK
+-   Sci-Learn
+-   StatsModels
+-   NLTK
 
 The intention is to expand this list to other packages. This is a simple
 example for linear regression that uses the data map structure to
@@ -140,14 +140,14 @@ Most packages used by **AdvancedAnalytics** are automatically
 installed with its installation. These consist of the following
 packages.
 
-> -   statsmodels
-> -   scikit-learn
-> -   scikit-image
-> -   nltk
-> -   pydotplus
-> -   graphviz
-> -   wordcloud
-> -   newspaper3k
+-   statsmodels
+-   scikit-learn
+-   scikit-image
+-   nltk
+-   pydotplus
+-   graphviz
+-   wordcloud
+-   newspaper3k
 
 ## Other Dependencies
 
